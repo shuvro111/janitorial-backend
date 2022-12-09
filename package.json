@@ -5,6 +5,7 @@
   "author": "Shuvro Sarkar",
   "license": "MIT",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "nodemon --exec babel-node src/server",
     "lint": "eslint . --ext .js",
