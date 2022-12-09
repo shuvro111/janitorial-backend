@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
-import { db, port } from './config/config';
-import routes from './routes';
+import { db, port } from './config/config.js';
+import routes from './routes.js';
 
 dotenv.config();
 
