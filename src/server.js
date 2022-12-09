@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import morgan from 'morgan';
 import { db, port } from './config/config';
 import routes from './routes';
-//
+
 dotenv.config();
 
 const app = express();

@@ -6,8 +6,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server",
-    "start": "babel-node src/server",
+    "start": "nodemon --exec babel-node src/server",
     "lint": "eslint . --ext .js",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
   },
