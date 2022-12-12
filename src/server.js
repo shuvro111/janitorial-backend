@@ -20,6 +20,8 @@ app.all('/', (req, res) => {
   res.send('Yo!');
 });
 
+mongoose.set('strictQuery', false);
+
 mongoose.connect(
   db,
   {

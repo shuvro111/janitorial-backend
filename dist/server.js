@@ -10,10 +10,6 @@ var _routes = _interopRequireDefault(require("./routes"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 _dotenv["default"].config();
 var app = (0, _express["default"])();
-_mongoose["default"].connect(_config.db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
 app.use((0, _cors["default"])());
 app.enable('trust proxy');
 app.use(_bodyParser["default"].json({
@@ -24,6 +20,12 @@ app.all('/', function (req, res) {
   console.log('Just got a request!');
   res.send('Yo!');
 });
-app.listen(_config.port, function () {
-  console.log("Server started on   + ".concat(_config.port));
+_mongoose["default"].set('strictQuery', false);
+_mongoose["default"].connect(_config.db, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}, function () {
+  app.listen(_config.port, function () {
+    console.log("Server started on   + ".concat(_config.port));
+  });
 });
