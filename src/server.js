@@ -22,15 +22,19 @@ app.all('/', (req, res) => {
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect(
-  db,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  () => {
-    app.listen(port, () => {
-      console.log(`Server started on   + ${port}`);
-    });
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(db);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
   }
-);
+};
+
+//Connect to the database before listening
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Server started on   + ${port}`);
+  });
+});
