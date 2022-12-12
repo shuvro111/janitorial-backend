@@ -4,6 +4,8 @@ import Client from '../client/Client';
 import { secret } from '../config/config';
 import Stuff from '../stuff/Stuff';
 
+console.log(`JWT SECRET IS: ${secret}`);
+
 // setting the jwt strategy
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
