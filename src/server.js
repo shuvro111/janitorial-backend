@@ -3,8 +3,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
-import { db, port } from './config/config.js';
-import routes from './routes.js';
+import { db, port } from './config/config';
+import routes from './routes';
 
 dotenv.config();
 
