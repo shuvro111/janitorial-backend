@@ -3,7 +3,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
-import morgan from 'morgan';
 import { db, port } from './config/config';
 import routes from './routes';
 
@@ -15,7 +14,6 @@ mongoose.connect(db, {
   useUnifiedTopology: true,
 });
 
-app.use(morgan('combined'));
 app.use(cors());
 app.enable('trust proxy');
 app.use(bodyParser.json({ type: '*/*' }));
