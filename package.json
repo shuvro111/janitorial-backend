@@ -5,7 +5,6 @@
   "author": "Shuvro Sarkar",
   "license": "MIT",
   "private": true,
-  "type": "module",
   "scripts": {
     "lint": "eslint . --ext .js",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
