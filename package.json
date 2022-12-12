@@ -1,21 +1,14 @@
 {
   "name": "janitorial-leads-pro-api",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "dist/src/server.js",
   "author": "Shuvro Sarkar",
   "license": "MIT",
   "private": true,
   "type": "module",
-  "exports": {
-    "./src/*": "./src/*.js"
-  },
-  "imports": {
-    "./src/*": "./src/*.js"
-  },
   "scripts": {
     "lint": "eslint . --ext .js",
-    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
-    "start": "babel src --out-dir dist"
+    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
