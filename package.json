@@ -1,23 +1,30 @@
 {
-  "name": "starter-express-api",
+  "name": "janitorial-leads-pro-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "main": "src/server.js",
+  "author": "Shuvro Sarkar",
+  "license": "MIT",
+  "private": true,
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .js",
+    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "nodemon": "^2.0.19"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
-  },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "nodemailer": "^6.8.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.7.0"
   }
 }
