@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import passport from 'passport';
 import authRouter from './auth/auth.routes';
 import clientRouter from './client/client.routes';
 import leadRouter from './lead/lead.routes';
@@ -9,9 +8,9 @@ import stuffRouter from './stuff/stuff.routes';
 import './services/passport';
 const router = Router();
 
-const requireAuth = passport.authenticate('jwt', {
-  session: false,
-});
+// const requireAuth = passport.authenticate('jwt', {
+//   session: false,
+// });
 
 router.use('/auth', authRouter);
 router.use('/stuff', stuffRouter);
