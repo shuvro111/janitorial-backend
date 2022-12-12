@@ -3,18 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.secret = exports.port = exports.db = exports.client = void 0;
 var _dotenv = _interopRequireDefault(require("dotenv"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 _dotenv["default"].config();
 var port = process.env.PORT;
+exports.port = port;
 var db = process.env.db;
+exports.db = db;
 var secret = process.env.JWT_SECRET;
+exports.secret = secret;
 var client = process.env.CLIENT_BASE_URL;
-var _default = {
-  port: port,
-  db: db,
-  secret: secret,
-  client: client
-};
-exports["default"] = _default;
+exports.client = client;
