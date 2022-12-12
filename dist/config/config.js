@@ -9,7 +9,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _dotenv["default"].config();
 var port = process.env.PORT;
 exports.port = port;
-var db = process.env.db;
+var db = process.env.DB;
 exports.db = db;
 var secret = process.env.JWT_SECRET;
 exports.secret = secret;
