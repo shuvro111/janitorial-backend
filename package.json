@@ -7,7 +7,9 @@
   "private": true,
   "scripts": {
     "lint": "eslint . --ext .js",
-    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
+    "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
+    "build": "babel src --out-dir dist",
+    "start": "node dist/server.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
