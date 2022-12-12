@@ -9,10 +9,6 @@ import routes from './routes';
 dotenv.config();
 
 const app = express();
-mongoose.connect(db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
 app.use(cors());
 app.enable('trust proxy');
@@ -24,6 +20,15 @@ app.all('/', (req, res) => {
   res.send('Yo!');
 });
 
-app.listen(port, () => {
-  console.log(`Server started on   + ${port}`);
-});
+mongoose.connect(
+  db,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  () => {
+    app.listen(port, () => {
+      console.log(`Server started on   + ${port}`);
+    });
+  }
+);
