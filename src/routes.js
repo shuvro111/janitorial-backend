@@ -5,7 +5,7 @@ import leadRouter from './lead/lead.routes.js';
 import statsRouter from './stats/stats.routes.js';
 import stuffRouter from './stuff/stuff.routes.js';
 
-import './services/passport';
+import './services/passport.js';
 const router = Router();
 
 // const requireAuth = passport.authenticate('jwt', {

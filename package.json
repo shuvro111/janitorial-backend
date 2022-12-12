@@ -6,6 +6,9 @@
   "license": "MIT",
   "private": true,
   "type": "module",
+  "exports": {
+    "./src/*": "./src/*.js"
+  },
   "scripts": {
     "lint": "eslint . --ext .js",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write"
