@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import authRouter from './auth/auth.routes';
-import clientRouter from './client/client.routes';
-import leadRouter from './lead/lead.routes';
-import statsRouter from './stats/stats.routes';
-import stuffRouter from './stuff/stuff.routes';
+import authRouter from './auth/auth.routes.js';
+import clientRouter from './client/client.routes.js';
+import leadRouter from './lead/lead.routes.js';
+import statsRouter from './stats/stats.routes.js';
+import stuffRouter from './stuff/stuff.routes.js';
 
 import './services/passport';
 const router = Router();
