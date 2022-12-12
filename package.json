@@ -1,7 +1,7 @@
 {
   "name": "janitorial-leads-pro-api",
   "version": "1.0.0",
-  "main": "dist/src/server.js",
+  "main": "dist/server.js",
   "author": "Shuvro Sarkar",
   "license": "MIT",
   "private": true,
