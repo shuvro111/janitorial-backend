@@ -117,6 +117,7 @@ export const logout = (req, res) => {
 
 export const signin = async (req, res, next) => {
   const { email, password } = req.body;
+  console.log({ email, password });
   try {
     let user;
     user = await Stuff.findOne({ email: email });
